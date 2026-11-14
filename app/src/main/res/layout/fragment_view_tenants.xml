@@ -18,7 +18,7 @@
                 android:id="@+id/newTenantLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Just added"
+                android:text="Selected tenant"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toTopOf="parent"
@@ -74,6 +74,15 @@
                 app:layout_constraintTop_toBottomOf="@id/allTenantsLabel"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/selectTenantButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT TENANT"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/allTenantsTextView"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

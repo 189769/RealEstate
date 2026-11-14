@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.tenantmanagementsystem.R
 import com.example.tenantmanagementsystem.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -24,6 +26,17 @@ class DashboardFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.addTenantButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_addTenantFragment)
+        }
+        binding.viewTenantsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_viewTenantsFragment)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         val tenantCount = TenantRepository.tenants.size
         val totalRent = TenantRepository.totalRent()

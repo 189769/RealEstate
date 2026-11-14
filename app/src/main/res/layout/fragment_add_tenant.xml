@@ -60,7 +60,7 @@
         android:id="@+id/rentEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Enter Rent Paid"
+        android:hint="Enter monthly rent"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         android:padding="12dp"
