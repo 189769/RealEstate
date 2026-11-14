@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RealEstateManagementSystem</string>
+    <string name="auth_brand">REAL ESTATE MANAGEMENT</string>
+    <string name="login_title">Welcome back</string>
+    <string name="register_title">Create an account</string>
+    <string name="login_subtitle">Enter your details to continue.</string>
+    <string name="register_subtitle">Enter your details to get started.</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="password_hint">Use at least 8 characters.</string>
+    <string name="login_action">Log in</string>
+    <string name="register_action">Register</string>
+    <string name="register_link">New here? Register</string>
+    <string name="login_link">Already have an account? Log in</string>
+    <string name="ui_only_notice">UI preview only. No accounts are created or authenticated.</string>
+    <string name="error_required">This field is required.</string>
+    <string name="error_email">Enter a valid email address.</string>
+    <string name="error_password">Use at least 8 characters.</string>
+    <string name="error_password_match">Passwords must match.</string>
+    <string name="validation_complete">Validation complete</string>
+    <string name="backend_notice">Your entries pass the form checks. No authentication backend is connected, so you have not been signed in and no account has been created.</string>
+</resources>

@@ -1,32 +1,31 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
 
-### Kotlin ###
-.kotlin
+*.iml
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Android Studio
+.idea/
+.idea.backup/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Gradle and Kotlin
+.gradle/
+.kotlin/
+/build/
+**/build/
 
-### VS Code ###
-.vscode/
+# Local configuration
+local.properties
 
-### Mac OS ###
+# Backups
+.gitignore.backup
+
+# Android generated files
+/captures/
+.externalNativeBuild/
+.cxx/
 .DS_Store
+
+# Sensitive files
+*.jks
+*.keystore
+.env
+.env.*
+  
