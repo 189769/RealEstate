@@ -1,5 +1,6 @@
-package com.example.tenantmanagementsystem
+package com.example.tenantmanagementsystem.ui.tenants
 
+import com.example.tenantmanagementsystem.data.repository.TenantRepository
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

@@ -1,5 +1,7 @@
-package com.example.tenantmanagementsystem
+package com.example.tenantmanagementsystem.ui.main
 
+import com.example.tenantmanagementsystem.R
+import com.example.tenantmanagementsystem.ui.auth.LoginActivity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log

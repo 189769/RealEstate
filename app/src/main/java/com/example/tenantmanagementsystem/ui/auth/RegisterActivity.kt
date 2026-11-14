@@ -1,4 +1,4 @@
-package com.example.tenantmanagementsystem // Match your exact package name
+package com.example.tenantmanagementsystem.ui.auth // Match your exact package name
 
 import android.content.Intent
 import android.os.Bundle
