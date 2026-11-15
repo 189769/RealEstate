@@ -1,60 +1,69 @@
+
 package com.example.tenantmanagementsystem.ui.viewmodel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.tenantmanagementsystem.data.local.TenantDatabase
 import com.example.tenantmanagementsystem.data.model.Tenant
 import com.example.tenantmanagementsystem.data.repository.TenantRepository
+import kotlinx.coroutines.launch
 
-class TenantViewModel : ViewModel() {
+class TenantViewModel(application: Application) :
+    AndroidViewModel(application) {
 
-    // Holds the current list of tenants
-    private val _tenants = MutableLiveData<List<Tenant>>(
-        TenantRepository.tenants.toList()
-    )
-    val tenants: LiveData<List<Tenant>> = _tenants
+    // Connect to Room Database
+    private val tenantDao =
+        TenantDatabase.getDatabase(application).tenantDao()
 
-    // Holds the total number of tenants
+    private val repository = TenantRepository(tenantDao)
+
+    // Observe tenants stored in Room
+    val tenants: LiveData<List<Tenant>> = repository.tenants
+
+    // Dashboard information
     private val _tenantCountText = MutableLiveData<String>()
     val tenantCountText: LiveData<String> = _tenantCountText
 
-    // Holds the total monthly rent
     private val _totalRentText = MutableLiveData<String>()
     val totalRentText: LiveData<String> = _totalRentText
 
-    // Holds formatted tenant information
     private val _allTenantsText = MutableLiveData<String>()
     val allTenantsText: LiveData<String> = _allTenantsText
 
-    // Initialize tenant information
     init {
-        refreshTenantSummaries()
+        tenants.observeForever(::updateTenantSummaries)
     }
 
-    // Add a new tenant
+    // Save a tenant into Room Database
     fun addTenant(tenant: Tenant) {
-        TenantRepository.tenants.add(tenant)
-
-        // Update LiveData with the latest tenants
-        _tenants.value = TenantRepository.tenants.toList()
-
-        // Update tenant count, rent and summaries
-        refreshTenantSummaries()
+        viewModelScope.launch {
+            repository.addTenant(tenant)
+        }
     }
 
-    // Refresh all observable tenant information
-    private fun refreshTenantSummaries() {
-        val currentTenants = _tenants.value.orEmpty()
-
+    // Update dashboard and tenant summaries
+    private fun updateTenantSummaries(
+        currentTenants: List<Tenant>
+    ) {
         _tenantCountText.value =
             "Tenant Count: ${currentTenants.size}"
 
         _totalRentText.value =
-            "Total Monthly Rent: KSh ${TenantRepository.totalRent()}"
+            "Total Monthly Rent: KSh ${
+                repository.totalRent(currentTenants)
+            }"
 
         _allTenantsText.value =
-            currentTenants.joinToString(separator = "\n\n") {
+            currentTenants.joinToString("\n\n") {
                 it.summary
             }
+    }
+
+    override fun onCleared() {
+        tenants.removeObserver(::updateTenantSummaries)
+        super.onCleared()
     }
 }

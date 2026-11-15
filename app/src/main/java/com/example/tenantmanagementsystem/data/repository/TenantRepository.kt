@@ -1,15 +1,27 @@
+
 package com.example.tenantmanagementsystem.data.repository
 
+import androidx.lifecycle.LiveData
+import com.example.tenantmanagementsystem.data.local.TenantDao
 import com.example.tenantmanagementsystem.data.model.Tenant
 
-object TenantRepository {
-    val tenants = mutableListOf<Tenant>()
+class TenantRepository(
+    private val tenantDao: TenantDao
+) {
 
-    fun addTenant(tenant: Tenant) {
-        tenants.add(tenant)
+    // Observe all tenants stored in Room
+    val tenants: LiveData<List<Tenant>> =
+        tenantDao.getAllTenants()
+
+    // Save a tenant into Room Database
+    suspend fun addTenant(tenant: Tenant) {
+        tenantDao.insertTenant(tenant)
     }
 
-    fun totalRent(): Double {
-        return tenants.sumOf { it.rent.toDoubleOrNull() ?: 0.0 }
+    // Calculate the total monthly rent
+    fun totalRent(tenants: List<Tenant>): Double {
+        return tenants.sumOf {
+            it.rent.toDoubleOrNull() ?: 0.0
+        }
     }
 }
