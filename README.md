@@ -73,15 +73,20 @@ The following functionality was tested successfully:
 
 ## 7. Group Contributions
 
-The project was developed by a six-member group.
+The Real Estate Tenant Management System was developed collaboratively by six group members from Strathmore University.
 
-- **189769 john wambugu— Group Leader:** Initial Android project setup, application navigation, authentication screens, and tenant management foundation.
-- **184684 Nicholas Rogena:** TenantViewModel and LiveData implementation.
-- **193557 Collins Karani:** Room Database, entity, and DAO implementation.
-- **190066Timothy Kasaine:** Connected tenant screens and dashboard to the ViewModel.
-- **189628 Sammy Kiema:** Integrated Room Database with the repository and ViewModel.
-- **189740 Titus Gakunju**-Authentication improvements, application testing, documentation, and final project preparation.
+| Admission Number | Full Name | Role and Contribution |
+|---|---|---|
+| 189769 | John Wambugu | **Group Leader — Stage 1:** Initial Android project setup, application navigation, authentication screens, and tenant management foundation. |
+| 184684 | Nicholas Rogena | **Stage 2 — ViewModel:** Implemented TenantViewModel and LiveData. |
+| 193557 | Collins Karani | **Stage 3 — Room Database:** Implemented the Room database, Tenant entity, and DAO. |
+| 190066 | Timothy Kasaine | **Stage 4 — UI Integration:** Connected tenant screens and the dashboard to the ViewModel. |
+| 189628 | Sammy Kiema | **Stage 5 — Data Integration:** Integrated the Room database with the repository and ViewModel. |
+| 189740 | Titus Gakunju | **Stage 6 — Testing and Release:** Authentication improvements, application testing, documentation, and final project preparation. |
 
+### Collaboration
+
+The group used Git and GitHub for version control, feature branches, pull requests, and collaborative development.
 ## 8. Known Limitations
 
 - Authentication is implemented locally for demonstration purposes and is not suitable for production use.
@@ -107,14 +112,14 @@ The application provides essential tenant management functionality and can be ex
 
 ## Group Members and Contributions
 
-| No. | Full Name | Admission Number | Responsibility |
-|---|---|---|---|
-| 1 | [Full Name] | [Admission Number] | Stage 1 — Project Lead and Architecture |
-| 2 | [Full Name] | [Admission Number] | Stage 2 — ViewModel and LiveData |
-| 3 | [Full Name] | [Admission Number] | Stage 3 — Room Database |
-| 4 | [Full Name] | [Admission Number] | Stage 4 — UI and ViewModel Integration |
-| 5 | [Full Name] | [Admission Number] | Stage 5 — Data Integration |
-| 6 | [Full Name] | [Admission Number] | Stage 6 — Testing, Documentation and Release |
+| No. | Full Name         | Admission Number | Responsibility |
+|---|-------------------|------------------|---|
+| 1 | [john wambugu]    | [189769]         | Stage 1 — Project Lead and Architecture |
+| 2 | [Nicholas Rogena] | [184684]         | Stage 2 — ViewModel and LiveData |
+| 3 | [Collins Karani]  | [193557]         | Stage 3 — Room Database |
+| 4 | [Timothy Kasaine] | [190066]         | Stage 4 — UI and ViewModel Integration |
+| 5 | [Sammy Kiema]     | [189628]         | Stage 5 — Data Integration |
+| 6 | [Titus Gakunji]   | [189740]         | Stage 6 — Testing, Documentation and Release |
 
 ## GitHub Collaboration
 
