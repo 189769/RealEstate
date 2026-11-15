@@ -75,12 +75,12 @@ The following functionality was tested successfully:
 
 The project was developed by a six-member group.
 
-- **Member 1 — Group Leader:** Initial Android project setup, application navigation, authentication screens, and tenant management foundation.
-- **Member 2:** TenantViewModel and LiveData implementation.
-- **Member 3:** Room Database, entity, and DAO implementation.
-- **Member 4:** Connected tenant screens and dashboard to the ViewModel.
-- **Member 5:** Integrated Room Database with the repository and ViewModel.
-- **Final Integration and Testing — Group Leader:** Authentication improvements, application testing, documentation, and final project preparation.
+- **189769 john wambugu— Group Leader:** Initial Android project setup, application navigation, authentication screens, and tenant management foundation.
+- **184684 Nicholas Rogena:** TenantViewModel and LiveData implementation.
+- **193557 Collins Karani:** Room Database, entity, and DAO implementation.
+- **190066Timothy Kasaine:** Connected tenant screens and dashboard to the ViewModel.
+- **189628 Sammy Kiema:** Integrated Room Database with the repository and ViewModel.
+- **189740 Titus Gakunju**-Authentication improvements, application testing, documentation, and final project preparation.
 
 ## 8. Known Limitations
 
@@ -104,3 +104,20 @@ The project was developed by a six-member group.
 The Real Estate Tenant Management System demonstrates Android application development using Kotlin, Room Database, and MVVM architecture.
 
 The application provides essential tenant management functionality and can be expanded to support more advanced real estate operations.
+
+## Group Members and Contributions
+
+| No. | Full Name | Admission Number | Responsibility |
+|---|---|---|---|
+| 1 | [Full Name] | [Admission Number] | Stage 1 — Project Lead and Architecture |
+| 2 | [Full Name] | [Admission Number] | Stage 2 — ViewModel and LiveData |
+| 3 | [Full Name] | [Admission Number] | Stage 3 — Room Database |
+| 4 | [Full Name] | [Admission Number] | Stage 4 — UI and ViewModel Integration |
+| 5 | [Full Name] | [Admission Number] | Stage 5 — Data Integration |
+| 6 | [Full Name] | [Admission Number] | Stage 6 — Testing, Documentation and Release |
+
+## GitHub Collaboration
+
+The project was developed collaboratively using Git feature branches, pull requests, code reviews and merges.
+
+All project contributions can be viewed under the repository's GitHub commit history and pull requests.
